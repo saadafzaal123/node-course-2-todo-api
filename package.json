@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node task-manager/src/index.js",
+    "dev": "nodemon task-manager/src/index.js"
   },
   "author": "Saad Afzaal",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^2.2.5"
+    "express": "^4.16.4",
+    "mongodb": "^2.2.5",
+    "mongoose": "^5.3.16",
+    "validator": "^10.9.0"
   }
 }
