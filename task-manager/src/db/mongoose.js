@@ -2,10 +2,9 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false
 });
-
-
 
 // const me = new User({
 //     name: '   Jason',
@@ -18,15 +17,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
 //     console.log(me);
 // }).catch((error) => {
 //     console.log('Error: ', error);
-// });
-
-// const Task = mongoose.model('Task', {
-//     description: {
-//         type: String
-//     },
-//     completed: {
-//         type: Boolean
-//     }
 // });
 
 // const task = new Task({
