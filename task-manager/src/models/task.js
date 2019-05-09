@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-const Task = mongoose.model('Task', {
+const taskSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
@@ -12,5 +12,18 @@ const Task = mongoose.model('Task', {
         default: false
     }
 });
+
+taskSchema.pre('save', async function(next) {
+    const task = this;
+    
+    // if(user.isModified('password')) {
+    //     user.password = await bcrypt.hash(user.password, 8);
+    // }
+    // console.log('This is before save and update task');
+    
+    next();
+});
+
+const Task = mongoose.model('Task', taskSchema);
 
 module.exports = Task;
