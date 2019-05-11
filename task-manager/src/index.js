@@ -24,6 +24,18 @@ app.listen(port, () => {
     console.log('Server is up on port ' + port);
 });
 
+// const main = async () => {
+//     const task = await Task.findById('5cd7366be712382db846a9ba');
+//     await task.populate('owner').execPopulate();
+//     console.log(task);
+
+//     const user = await User.findById('5cd73629e712382db846a9b8');
+//     await user.populate('tasks').execPopulate();
+//     console.log(user.tasks);
+// }
+
+// main();
+
 // const jwt = require('jsonwebtoken');
 
 // const myFunction = async () => {
